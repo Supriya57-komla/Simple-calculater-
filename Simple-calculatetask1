@@ -1,0 +1,47 @@
+package calci;
+import java.util.Scanner;
+
+class Calculate{
+	 public static void main(String []args) {
+
+// initialisation of variables
+		int n_1,n_2, operation;
+
+		System.out.println("Enter two numbers");
+// user input of two numbers
+		Scanner sc= new Scanner(System.in);
+		n_1=sc.nextInt();
+		n_2=sc.nextInt();
+// operation to be performed
+		System.out.println("Enter the operation");
+		operation=sc.nextInt();
+
+// switch case
+		switch(operation) {
+		case 1: 
+			int add=n_1+n_2;
+			System.out.println(add);
+			break;
+		case 2:
+			int substract=n_1-n_2;
+			System.out.println(substract);
+			break;
+		case 3: 
+			int multiply=n_1*n_2;
+			System.out.println(multiply);
+			break;
+		case 4:
+			if(n_2==0) {
+				System.out.println("undefined");
+			}
+			else {
+			int divide=n_1/n_2;
+			System.out.println(divide);
+			}
+			break;	
+		default: 
+			System.out.println("Invalid Input");
+		}
+		
+	 }
+}
